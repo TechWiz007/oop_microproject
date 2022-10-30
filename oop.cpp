@@ -29,16 +29,16 @@ class book_store {
 		copies_available = 100;
 		count = copies_available;
 	}
-	int accept_book();	//To accept book entries
-	int sell();	//To sell a book after checking for its availability
-	int return_book();	//To return a sold book
-	int display_book();	//To display book information
-	int book_status();	//To display current status of book available based on the book name
+	void accept_book();	//To accept book entries
+	void sell();	//To sell a book after checking for its availability
+	void return_book();	//To return a sold book
+	void display_book();	//To display book information
+	void book_status();	//To display current status of book available based on the book name
 };
 
 int book_store::copies_available;
 
-int book_store::accept_book() {
+void book_store::accept_book() {
 	system("cls");
 	fstream book_data;
 	cout<<"Name of the book: ";
@@ -53,27 +53,22 @@ int book_store::accept_book() {
 	file.open(book_data.txt, ios::out | ios::app);
 	file<<"Name of the book: "<<book_name<<"\nAuthor: "<<author<<"\nPublisher: "<<publisher<<"\nPrice: "<<price;
 	file.close();
-	return 0;
 }
 
-int book_store::sell() {
+void book_store::sell() {
 
-	return 0;
 }
 
-int book_store::return_book() {
+void book_store::return_book() {
 
-	return 0;
 }
 
-int book_store::display_book() {
+void book_store::display_book() {
 
-	return 0;
 }
 
-int book_store::book_status() {
+void book_store::book_status() {
 	
-	return 0;
 }
 
 int main() {
