@@ -50,9 +50,9 @@ void book_store::accept_book() {
 	cout<<"\nPrice of the book: ";
 	cin>>price;
 
-	file.open(book_data.txt, ios::out | ios::app);
-	file<<"Name of the book: "<<book_name<<"\nAuthor: "<<author<<"\nPublisher: "<<publisher<<"\nPrice: "<<price;
-	file.close();
+	book_data.open("book_data.txt", ios::out | ios::app);
+	book_data<<"Name of the book: "<<book_name<<"\nAuthor: "<<author<<"\nPublisher: "<<publisher<<"\nPrice: "<<price;
+	book_data.close();
 }
 
 void book_store::sell() {
